@@ -26,27 +26,34 @@ const AboutUs = () => {
       title: "CERRO DE LA VÍRGEN",
       description: "",
       image: "/img/img6.jpeg",
-      type: "vertical"   
+      type: "vertical"
     },
     {
-    title: "SANTUARIO DE LA SANTÍSIMA CRUZ DE CHALPÓN",
+      title: "SANTUARIO DE LA SANTÍSIMA CRUZ DE CHALPÓN",
       description: "",
       image: "/img/img7.jpg",
       type: "vertical"
     }
   ];
-  
+
   return (
     <div
       className="min-h-screen"
       style={{
-        background: `radial-gradient(100% 100% at 50% 100%, var(--Gradients-Main-Color-4, #FF9875) 0%, var(--Gradients-Main-Color-3, #B452FF) 15%, var(--Gradients-Main-Color-2, #673DE6) 30%, var(--neutral--800, #1a1b1e) 80%)`
+        background: `radial-gradient(
+          100% 100% at 50% 100%,
+          #FF9875 0%,
+          #B452FF 15%,
+          #673DE6 30%,
+          #1a1b1e 80%
+        )`
       }}
     >
       <Navigation title="Sobre Nosotros" backTo="/welcome" />
-      
+
       <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Hero Section */}
+        
+        {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,11 +63,16 @@ const AboutUs = () => {
             Foto Studio Digital "MADUEÑO"
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            Somos Foto Studio Digital Madueño, con más de 30 años de experiencia dedicados a capturar recuerdos que duran toda la vida. Nos apasiona la fotografía y trabajamos con compromiso y creatividad para ofrecer imágenes de alta calidad. Contamos con paisajes únicos y escenarios exclusivos que realzan cada sesión, brindando una experiencia inolvidable para nuestros clientes. En cada foto buscamos reflejar emociones, historias y momentos auténticos que merecen ser recordados.
+            Somos Foto Studio Digital Madueño, con más de 30 años de experiencia
+            dedicados a capturar recuerdos que duran toda la vida. Nos apasiona
+            la fotografía y trabajamos con compromiso y creatividad para ofrecer
+            imágenes de alta calidad. Contamos con paisajes únicos y escenarios
+            exclusivos que realzan cada sesión, brindando una experiencia
+            inolvidable para nuestros clientes.
           </p>
         </motion.div>
-        
-        {/* Mission Section */}
+
+        {/* Ubicación */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,11 +83,14 @@ const AboutUs = () => {
             ¿Dónde nos ubicamos?
           </h2>
           <p className="text-white/80 text-lg leading-relaxed">
-            Puedes encontrarnos en la estación número 13 a un minuto del santuario de la Santísima Cruz de Chalpón, en Motupe, Lambayeque, Perú. Nuestro estudio está estratégicamente ubicado para ofrecerte un acceso fácil y conveniente, permitiéndote combinar tu visita al santuario con una sesión fotográfica profesional en un entorno lleno de historia y espiritualidad.
+            Puedes encontrarnos en la estación número 13 a un minuto del
+            Santuario de la Santísima Cruz de Chalpón, en Motupe, Lambayeque,
+            Perú. Nuestro estudio está estratégicamente ubicado para ofrecerte
+            un acceso fácil y conveniente.
           </p>
         </motion.div>
-        
-        {/* Values Grid */}
+
+        {/* Galería */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,23 +115,22 @@ const AboutUs = () => {
                 <img
                   src={value.image}
                   alt={value.title}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
 
                 <div className="absolute inset-0 bg-black/40" />
 
                 <div className="relative z-10 p-4 flex flex-col justify-end h-full">
-                  <h3 className="text-xl font-bold text-white mb-1">
+                  <h3 className="text-xl font-bold text-white">
                     {value.title}
                   </h3>
-                  <p className="text-white/80 text-sm">
-                    {value.description}
-                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
+
       </div>
     </div>
   );
