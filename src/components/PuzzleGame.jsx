@@ -131,7 +131,7 @@ const PuzzleGame = () => {
           </motion.div>
 
           <h1 className="text-2xl font-bold text-white mb-2">
-            ¿Quieres conocer el antiguo camino de la Stma Cruz de Chalpón? 
+            ¿Quieres conocer el antiguo camino de la Stma Cruz de Chalpón?
           </h1>
           <p className="text-white/80 text-sm">
             Arrastra y suelta las piezas para completar el puzzle
@@ -232,19 +232,17 @@ const PuzzleGame = () => {
           Reiniciar Puzzle
         </button>
 
-        {/* CONTINUAR */}
+        {/* OMITIR / CONTINUAR */}
         <AnimatePresence>
-          {isCompleted && (
-            <motion.button
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              onClick={() => navigate('/welcome')}
-              className="mt-3 w-full py-3 bg-white text-black rounded-full text-lg font-semibold"
-            >
-              Continuar
-            </motion.button>
-          )}
+          <motion.button
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            onClick={() => navigate('/welcome')}
+            className="mt-3 w-full py-3 bg-white text-black rounded-full text-lg font-semibold"
+          >
+            {isCompleted ? 'Continuar' : 'Omitir'}
+          </motion.button>
         </AnimatePresence>
       </motion.div>
 
