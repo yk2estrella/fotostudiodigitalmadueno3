@@ -7,31 +7,31 @@ const AboutUs = () => {
     {
       title: "YO AMO MOTUPE",
       description: "",
-      image: "/img/img3.jpg",
+      image: "img/img3.jpg",
       type: "horizontal"
     },
     {
       title: "GRANJA FOTOGRÁFICA",
       description: "",
-      image: "/img/img4.jpg",
+      image: "img/img4.jpg",
       type: "vertical"
     },
     {
       title: "ANTIGUA GRUTA DE CHALPÓN",
       description: "",
-      image: "/img/img5.jpeg",
+      image: "img/img5.jpeg",
       type: "vertical"
     },
     {
       title: "CERRO DE LA VÍRGEN",
       description: "",
-      image: "/img/img6.jpeg",
+      image: "img/img6.jpeg",
       type: "vertical"
     },
     {
       title: "SANTUARIO DE LA SANTÍSIMA CRUZ DE CHALPÓN",
       description: "",
-      image: "/img/img7.jpg",
+      image: "img/img7.jpg",
       type: "vertical"
     }
   ];
@@ -128,7 +128,7 @@ const AboutUs = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> 
         </motion.div>
 
       </div>
